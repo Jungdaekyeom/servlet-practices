@@ -69,5 +69,7 @@
 			
 	<modules>
 		<module>helloweb</module>
+		<module>guestbook1</module>
+		<module>guestbook01</module>
 	</modules>
 </project>
