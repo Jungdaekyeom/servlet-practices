@@ -13,4 +13,29 @@ where no=1
 and password='1234';
 
 select * from guestbook;
-delete from guestbook where no=1 password=ccc;
+delete from guestbook where no=1 and password='bbb';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+employees;
+department;
+
+
+SELECT *
+FROM employees a JOIN department b
+ON a.emp_no = b.emp_no;
+
+
+
+natural join = 조인;
