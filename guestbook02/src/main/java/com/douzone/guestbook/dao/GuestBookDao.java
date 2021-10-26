@@ -124,7 +124,7 @@ public class GuestBookDao {
 			// 4. 바인딩(binding)
 			pstmt.setLong(1, vo.getNo());
 			pstmt.setString(2, vo.getPassword());
-			
+
 			// 5. SQL 실행
 			int count = pstmt.executeUpdate();
 

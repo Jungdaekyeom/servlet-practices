@@ -18,11 +18,21 @@ delete from guestbook where no=1 and password='bbb';
 
 
 
+select * from guestbook;
+select * from user;
 
 
+-- 입력이 잘 되는지 테스트
+insert into user values(null, '둘리', 'dooly@gmail.com', '1234', 'male', now());
 
 
+select * from user;
 
+-- section01 : 
+select no, name from user where email='kickscar@gmail.com' and password='1234';
+
+-- section02
+select * from user;
 
 
 

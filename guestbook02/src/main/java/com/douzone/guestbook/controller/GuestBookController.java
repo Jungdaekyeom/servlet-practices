@@ -22,14 +22,12 @@ public class GuestBookController extends HttpServlet {
 		String action = request.getParameter("a");
 
 		if ("list".equals(action)) {
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
+			rd.forward(request, response);
+		} else if ("form".equals(action)) {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/form.jsp");
 			rd.forward(request, response);
-		} else if("form".equals(action)) {
-			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/form.jsp");
-			rd.forward(request, response);
-		}
-		
-		else if ("add".equals(action)) {
+		} else if ("add".equals(action)) {
 
 			String name = request.getParameter("name");
 			String password = request.getParameter("password");
@@ -56,9 +54,7 @@ public class GuestBookController extends HttpServlet {
 			// 돌아가는거
 			response.sendRedirect("/guestbook02/gb");
 
-		}
-
-		else {
+		} else {
 			GuestBookDao dao = new GuestBookDao();
 			List<GuestBookVo> list = dao.findAll();
 
@@ -66,12 +62,10 @@ public class GuestBookController extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
 			rd.forward(request, response);
 		}
-
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
-
 }

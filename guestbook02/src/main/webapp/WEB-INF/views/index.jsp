@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="com.douzone.guestbook.dao.GuestBookDao"%>
 <%@ page import="com.douzone.guestbook.vo.GuestBookVo"%>
-<%@page import="java.util.List"%>
+<%@ page import="java.util.List"%>
 
 <%
 List<GuestBookVo> list = (List<GuestBookVo>) request.getAttribute("list");
